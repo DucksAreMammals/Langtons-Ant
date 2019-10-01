@@ -8,6 +8,7 @@ let gridSize = 10;
 let start = false;
 let showGrid = true;
 let ticksPerUpdate = 1;
+let placeDir = 0;
 
 let drawMode = "ant";
 

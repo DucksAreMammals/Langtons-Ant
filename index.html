@@ -36,6 +36,14 @@
         <option value="delete">Delete</option>
       </select>
 
+      <span>Direction: </span>
+      <select onchange="placeDir = int(this.value)" value="North">
+        <option value="0">North</option>
+        <option value="1">East</option>
+        <option value="2">South</option>
+        <option value="3">West</option>
+      </select>
+
       <span>Grid width and height override: </span>
       <input type="number" min="0" id="csow">
       <input type="number" min="0" id="csoh">

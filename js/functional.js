@@ -12,7 +12,7 @@ function drag() {
         }
       }
 
-      ants.push(new Ant(x, y, 0));
+      ants.push(new Ant(x, y, placeDir));
     } else if (drawMode == "cell") {
       grid[x][y] = true;
     } else {
