@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <title>Langton's Ant demo</title>
+    <meta name="viewport" content="width=device-width">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="js/Ant.js"></script>
+    <script src="js/functional.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/options.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="options">
+      <button onclick="start = true">start</button>
+      <button onclick="start = false">stop</button>
+      <button onclick="showGrid = !showGrid">toggle grid</button>
+      <button onclick="restart()">restart</button>
+
+      <span>Ticks per update: </span>
+      <input type="number" min="1" value="1" onchange="updateTPU(this)">
+
+      <span>Framerate: </span>
+      <input type="number" min="0" value="60" onchange="frameRate(float(this.value))">
+
+      <span>Grid size: </span>
+      <input type="number" min="1" value="10" onchange="changeGridSize(float(this.value))">
+
+      <span>Drawing mode: </span>
+      <select onchange="drawMode = this.value" value="ant">
+        <option value="ant">Ant</option>
+        <option value="cell">Cell</option>
+        <option value="delete">Delete</option>
+      </select>
+
+      <span>Grid width and height override: </span>
+      <input type="number" min="0" id="csow">
+      <input type="number" min="0" id="csoh">
+      <button onclick="overrideCanvasSize()">Submit override</button>
+    </div>
+  </body>
+</html>
